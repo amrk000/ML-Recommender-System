@@ -1,0 +1,86 @@
+<html>
+<head>
+    <style>
+        a:hover, a:visited, a:link, a:active {
+            text-decoration: none;
+        }
+
+        #logo {
+            text-align: center;
+            margin: auto;
+        }
+
+        #title {
+            text-align: center;
+            font-size: 41px;
+            font-family: Arial, Verdana, Georgia;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #8342FE;
+            height: 106px;
+            line-height: 106px;
+        }
+
+        #footer {
+            text-align: center;
+            font-size: 18px;
+            font-family: Arial, Verdana, Georgia;
+            color: #000000;
+            background-color: #F3F3F3;
+            height: 106px;
+            line-height: 106px;
+        }
+
+        .item {
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #8442fe10;
+            width: 700px;
+            height: 200px;
+            border-radius: 35px;
+        }
+
+        .itemImage {
+            margin-right: 20px;
+            height: 200px;
+            width: 200px;
+            max-width: 200px;
+            margin-bottom: 10px;
+            float: left;
+            border-radius: 15px;
+        }
+
+        .itemTitle {
+            font-size: 38px;
+            font-family: Arial, Verdana, Georgia;
+            color: #000000;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .itemData {
+            font-size: 24px;
+            font-family: Arial, Verdana, Georgia;
+            color: #525252;
+        }
+    </style>
+
+    <div id='logo'>
+        <img src="https://dl.dropbox.com/s/340jp0nqo023xju/Sale%20Hunter%20Semi%20Horizontal.png" />
+    </div>
+</head>
+<body>
+    <div id='title'>
+        <p>Recommended For You</p>
+    </div>
+    <table align="center">
+
+        {items}
+
+    </table>
+    <div id='footer'>
+        <p>Copyright &copy; 2022 Sale Hunter, All rights reserved.</p>
+    </div>
+</body>
+</html>

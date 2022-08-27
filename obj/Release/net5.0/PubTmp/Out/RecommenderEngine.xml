@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecommenderEngine</name>
+    </assembly>
+    <members>
+        <member name="M:RecommenderEngine.Controllers.v2.MLModelController.Train(RecommenderEngine.DataModels.controllers.TrainRequestModel)">
+            <summary>
+            Train ML Model using users history dataset
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.MLModelController.TripleFactorTrain(RecommenderEngine.DataModels.controllers.TripleFactorTrainRequestModel)">
+            <summary>
+            Train ML Model using users history dataset
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.MLModelController.LastTrainingResults(System.String)">
+            <summary>
+            Get Last Training Results
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.MLModelController.LastTrainingDataset(System.String)">
+            <summary>
+            Get Last Training Dataset
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.RecommendController.PredictSingle(RecommenderEngine.DataModels.controllers.PredictSingleRequestModel)">
+            <summary>
+            Predict one item for a specific user
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.RecommendController.PredictMulti(RecommenderEngine.DataModels.controllers.PredictMultiRequestModel)">
+            <summary>
+            Predict list of items for a specific user and sort them by estimated score 
+            </summary>
+        </member>
+        <member name="M:RecommenderEngine.Controllers.v2.RecommendController.SendEmail(RecommenderEngine.DataModels.controllers.SendEmailRequestModel)">
+            <summary>
+            Predict list of items for a specific user pick top 5 and send by email
+            </summary>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.BaseResponseModel.Code">
+            <example>000</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.BaseResponseModel.Status">
+            <example>status values: (success, error)</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.BaseResponseModel.Message">
+            <example>message content</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.EmailItemModel.Name">
+            <example>Item Full Name/Title </example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.EmailItemModel.SubData">
+            <example>Item Subdata</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.EmailItemModel.ImageUrl">
+            <example>Item Image Url</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.EmailItemModel.PageUrl">
+            <example>Item Page Url</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.ItemModel.Id">
+            <example>446</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.ItemModel.Score">
+            <example>0.00</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictMultiRequestModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictMultiRequestModel.Items">
+            <example>[{id:446 ,score:0.0}, {id:242 ,score:0.0}, {id:627 ,score:0.0}, {id:23 ,score:0.0}, {id:2 ,score:0.0}, {id:93 ,score:0.0}]</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictMultiResponseModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictMultiResponseModel.Items">
+            <example>[{id:446 ,score:46.3434234}, {id:242 ,score:41.2312323}, {id:627 ,score:35.54345445}, {id:23 ,score:87.234234234}, {id:2 ,score:11.2323221}, {id:93 ,score:0.0}]</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictSingleRequestModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictSingleRequestModel.Item">
+            <example>{id:446 ,score:0.0}</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictSingleResponseModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.PredictSingleResponseModel.Item">
+            <example>{id:446 ,score:46.3434234}</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.SendEmailRequestModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.SendEmailRequestModel.UserEmail">
+            <example>user@email.com</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.SendEmailRequestModel.UserName">
+            <example>Hello World</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.SendEmailRequestModel.Items">
+            <example>[{id:446 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}, {id:242 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}, {id:627 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}, {id:23 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}, {id:2 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}, {id:93 ,score:0.0, name:"item name", subData:"subdata of item", imageUrl:"...", pageUrl:"..."}]</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.userId">
+            <example>627</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.itemId">
+            <example>54</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.factors">
+            <example>54</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.Factors.rate">
+            <example>4</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.Factors.favourite">
+            <example>1</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.TripleFactorDataModel.Factors.viewsCount">
+            <example>80</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.v1.PredictItemModel.Item">
+            <example>627</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.v1.PredictItemModel.Score">
+            <example>50.392300123</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.v1.PredictRequestModel.UserId">
+            <example>383</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.controllers.v1.PredictRequestModel.Items">
+            <example>[446, 242, 627, 23, 2, 93]</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.MLDataModel.userId">
+            <example>627</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.MLDataModel.itemId">
+            <example>54</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.MLDataModel.Label">
+            <example>79.3234678675</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.StartTime">
+            <example>5/28/2022 2:10:50 PM (UTC)</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TotalTime">
+            <example>4.70s</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.Status">
+            <example>completed</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.Details">
+            <example>Model is Trained and Built Successfully</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.DataSetModel.RecordsCount">
+            <example>1000</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.DataSetModel.SplitRatio">
+            <example>0.3</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.DataSetModel.TrainRecordsCount">
+            <example>700</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.DataSetModel.TestRecordsCount">
+            <example>300</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TrainingConfigsModel.NumberOfIterations">
+            <example>10000</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TrainingConfigsModel.LearningRate">
+            <example>0.001</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TrainingConfigsModel.ApproximationRank">
+            <example>100</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TrainingMetricesModel.Rmse">
+            <example>34.50738204637768</example>
+        </member>
+        <member name="P:RecommenderEngine.DataModels.ML.TrainingResultsModel.TrainingMetricesModel.RSquared">
+            <example>-0.5518134477338905</example>
+        </member>
+    </members>
+</doc>
