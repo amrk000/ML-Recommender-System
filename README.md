@@ -106,4 +106,4 @@ Note: Make sure to keep these variables: ```{items}, {itemTitle}, {itemData}, {i
 ---
 
 ## Postman Collection to test REST API with sample data:
-### Included in Project Files [Here]("https://github.com/amrk000/ML-Recommender-System/blob/master/Postman%20REST%20API%20Collection.json")
+### Included in Project Files [Here](Postman%20REST%20API%20Collection.json)
